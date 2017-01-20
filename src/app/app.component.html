@@ -1,3 +1,70 @@
-<h1>
-  {{title}}
-</h1>
+<header id="header" class="header title-color">
+  Title of webpage <br/>
+  with Icon
+</header>
+<div class="container">
+  <div class="martopbottom20 alignCenter">
+      <h3>Welcome to ShareStories</h3>
+</div>
+<div class="borderRadius4">
+    <div class="container padding20 maxWidth300 greyBckgrd borderRadius6">
+        <div>
+          <nav class="navbar">
+              <ul class="nav navbar-nav navbar-right">
+                <li (click)="navBarClick()"><a id="signUp" href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li (click)="navBarClick()"><a id="login" href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+              </ul>
+          </nav>
+          <div *ngIf="openSignUpBlock">
+            <div class="form-group">
+              <input type="text" class="form-control" id="name"
+                required [(ngModel)]="name" name="name" placeholder="Full Name">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="email"
+                required [(ngModel)]="email" name="email" placeholder="Email Address">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" id="password"
+                required [(ngModel)]="password" name="password" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="confirmPassword"
+                required [(ngModel)]="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
+            </div>
+            <div class="form-group">
+              <input type="checkbox" class="" id="termsAndConditionsCheck"
+              required [(ngModel)]="termsAndConditionsCheck" name="termsAndConditionsCheck">
+              I agree the <a href="#">Terms And Conditions</a>
+            </div>
+            <div>
+               <button type="button" class="btn btn-success btn-block">Sign Up</button>
+            </div>
+          </div>
+          <div *ngIf="!openSignUpBlock">
+            <div class="form-group">
+              <input type="email" class="form-control" id="email"
+                required [(ngModel)]="email" name="email" placeholder="Email Address">
+            </div>
+            <div class="alignRight">
+              <label for="password"><a href="#">Forgot password?</a></label>
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" id="password"
+                required [(ngModel)]="password" name="password" placeholder="Password">
+            </div>
+            <div>
+               <button type="button" class="btn btn-success btn-block">Sign in</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div *ngIf="!openSignUpBlock" class="martopbottom20 maxWidth300">
+      <div class="padding20 maxWidth300 greyBckgrd borderRadius6">
+        <div class="form-group">
+          New to ShareStories? <span (click)="navBarClick()"><a id="createAccount" href="#">Create an Account</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
