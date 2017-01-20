@@ -11,8 +11,8 @@
         <div>
           <nav class="navbar">
               <ul class="nav navbar-nav navbar-right">
-                <li (click)="navBarClick()"><a id="signUp" href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li (click)="navBarClick()"><a id="login" href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li (click)="navBarSignUpClick()"><a id="signUp" href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li (click)="navBarLoginClick()"><a id="login" href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
               </ul>
           </nav>
           <div *ngIf="openSignUpBlock">
@@ -60,9 +60,12 @@
         </div>
     </div>
     <div *ngIf="!openSignUpBlock" class="martopbottom20 maxWidth300">
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    </div>  
+    <div *ngIf="!openSignUpBlock" class="martopbottom20 maxWidth300">
       <div class="padding20 maxWidth300 greyBckgrd borderRadius6">
         <div class="form-group">
-          New to ShareStories? <span (click)="navBarClick()"><a id="createAccount" href="#">Create an Account</a></span>
+          New to ShareStories? <span (click)="navBarSignUpClick()"><a id="createAccount" href="#">Create an Account</a></span>
         </div>
       </div>
     </div>

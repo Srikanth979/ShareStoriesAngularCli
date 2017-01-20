@@ -29,13 +29,12 @@ export class AppComponent {
     }
   }
 
-  public navBarClick():void {
-    if(event !== undefined || event !== null){
-      /*if(event.target.id === 'signUp' || event.target.id === 'createAccount') {
-        this.openSignUpBlock = true;
-      }else if(event.target.id === 'login') {
-        this.openSignUpBlock = false;
-      }*/
-    }
+  public navBarSignUpClick(event: any):void {
+    this.openSignUpBlock = true;
   }
+
+  public navBarLoginClick(event: any):void {
+    this.openSignUpBlock = false;
+  }
+
 }
