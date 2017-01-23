@@ -59,9 +59,9 @@
           </div>
         </div>
     </div>
-    <div *ngIf="!openSignUpBlock" class="martopbottom20 maxWidth300">
+    <div [hidden]="openSignUpBlock" class="martopbottom20 maxWidth300">
       <div class="g-signin2" data-onsuccess="onSignIn"></div>
-    </div>  
+    </div>
     <div *ngIf="!openSignUpBlock" class="martopbottom20 maxWidth300">
       <div class="padding20 maxWidth300 greyBckgrd borderRadius6">
         <div class="form-group">
