@@ -17,20 +17,20 @@
           </nav>
           <div *ngIf="openSignUpBlock">
             <div class="form-group">
-              <input type="text" class="form-control" id="name"
-                required [(ngModel)]="name" name="name" placeholder="Full Name">
+              <input type="text" class="form-control" id="signUpForm.name"
+                required [(ngModel)]="signUpForm.name" name="signUpForm.name" placeholder="Full Name">
             </div>
             <div class="form-group">
-              <input type="email" class="form-control" id="email"
-                required [(ngModel)]="email" name="email" placeholder="Email Address">
+              <input type="email" class="form-control" id="signUpForm.email"
+                required [(ngModel)]="signUpForm.email" name="signUpForm.email" placeholder="Email Address">
             </div>
             <div class="form-group">
-              <input type="password" class="form-control" id="password"
-                required [(ngModel)]="password" name="password" placeholder="Password">
+              <input type="password" class="form-control" id="signUpForm.password"
+                required [(ngModel)]="signUpForm.password" name="signUpForm.password" placeholder="Password">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="confirmPassword"
-                required [(ngModel)]="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
+              <input type="text" class="form-control" id="signUpForm.confirmPassword"
+                required [(ngModel)]="signUpForm.confirmPassword" name="signUpForm.confirmPassword" placeholder="Confirm Password">
             </div>
             <div class="form-group">
               <input type="checkbox" class="" id="termsAndConditionsCheck"
@@ -43,18 +43,18 @@
           </div>
           <div *ngIf="!openSignUpBlock">
             <div class="form-group">
-              <input type="email" class="form-control" id="email"
-                required [(ngModel)]="email" name="email" placeholder="Email Address">
+              <input type="email" class="form-control" id="loginForm.email"
+                required [(ngModel)]="loginForm.email" name="loginForm.email" placeholder="Email Address">
             </div>
             <div class="alignRight">
-              <label for="password"><a href="#">Forgot password?</a></label>
+              <label for="loginForm.password"><a href="#">Forgot password?</a></label>
             </div>
             <div class="form-group">
-              <input type="password" class="form-control" id="password"
-                required [(ngModel)]="password" name="password" placeholder="Password">
+              <input type="password" class="form-control" id="loginForm.password"
+                required [(ngModel)]="loginForm.password" name="loginForm.password" placeholder="Password">
             </div>
             <div>
-               <button type="button" class="btn btn-success btn-block">Sign in</button>
+               <button type="button" class="btn btn-success btn-block" (click)="signIn()">Sign in</button>
             </div>
           </div>
         </div>
